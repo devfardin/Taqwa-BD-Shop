@@ -38,7 +38,6 @@ const SingleButton = ({ product }) => {
                 className='bg-primary text-white px-2 py-2 cursor-pointer transition-colors duration-300 w-full block text-center text-lg font-medium rounded'>
                 অর্ডার করুন
             </button>
-            <CartModal product={product}/>
         </div>
     )
 }

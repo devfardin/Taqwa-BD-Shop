@@ -71,7 +71,7 @@ const MobileMenu = ({ siteData }) => {
             <button
                 id="menu-trigger"
                 onClick={toggleMenu}
-                className="p-2 text-gray-700 hover:text-primary hover:bg-gray-100 rounded-lg transition-all duration-200"
+                className="p-3 text-white bg-primary hover:text-primary hover:bg-gray-100 rounded-lg transition-all duration-200"
                 aria-label="Toggle menu"
                 aria-expanded={isOpen}
             >

@@ -64,14 +64,14 @@ const Navbar = ({siteData}) => {
       </div>
 
       {/* Bottom Menu - Desktop Only */}
-      <div className='hidden lg:block bg-menubg border-t border-gray-200'>
+      <div className='hidden lg:block bg-primary border-t border-gray-200'>
         <Container>
           <nav className='flex items-center justify-center py-3'>
             {menuItems.map((item, index) => (
               <Link
                 key={index}
                 to={item.link}
-                className={`px-6 py-1 text-lg font-medium hover:text-menuhover ${location.pathname === item.link ? 'text-menucolor' : 'text-white'
+                className={`px-6 py-1 text-xl font-bold hover:text-menuhover ${location.pathname === item.link ? 'text-menucolor' : 'text-white'
                   }`}
               >
                 {item.label}

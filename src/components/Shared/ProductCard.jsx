@@ -10,14 +10,19 @@ const ProductCard = ({ product }) => {
 
 
     const addProductsToCart = (product) => {
-        const cart = JSON.parse(localStorage.getItem('cart')) || []
-        const productExists = cart.find((item) => item.id === product.id);
+        const existingCart = JSON.parse(localStorage.getItem('cart')) || []
+        const productExists = existingCart.find((item) => item.id === product.id);
+        
+        let cart;
         if (productExists) {
             productExists.quantity += 1;
+            cart = existingCart;
         } else {
+            // Clear existing cart and add new product
             product.quantity = 1;
-            cart.push(product);
+            cart = [product];
         }
+        
         localStorage.setItem("cart", JSON.stringify(cart));
         setCart([...cart]);
         if (cart.length > 0) {
@@ -65,11 +70,8 @@ const ProductCard = ({ product }) => {
                 </div>
                 <div className='mt-3 flex flex-col'>
 
-                    {/* Cart Modal  */}
-                    <CartModal product={product} />
-
                     <button onClick={() => addProductsToCart(product)}
-                        className='bg-primary text-white px-2 py-1.5 cursor-pointer transition-colors duration-300 w-full block text-center text-lg font-medium rounded-b-xl'>অর্ডার করুন</button>
+                        className='bg-primary text-white px-2 py-2.5 cursor-pointer transition-colors duration-300 w-full block text-center text-lg font-medium rounded-b-xl'>অর্ডার করুন</button>
                 </div>
             </div>
 

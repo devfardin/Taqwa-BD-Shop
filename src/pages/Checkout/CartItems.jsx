@@ -15,7 +15,7 @@ const CartItems = ({ shippingZoon, setCart, cart }) => {
         const updatedCart = cart.filter(item => item.id !== productId)
         localStorage.setItem('cart', JSON.stringify(updatedCart))
         setCart(updatedCart);
-        toast.info('Item removed from your cart.')
+        toast.info('Item removed from your cart.');
     }
 
     const updateQuantity = (productId, newQuantity) => {

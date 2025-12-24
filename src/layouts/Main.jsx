@@ -3,6 +3,7 @@ import Navbar from '../components/Shared/Navbar/Navbar'
 import Footer from '../components/Shared/Footer/Footer'
 import { useEffect, useState } from 'react'
 import { initFacebookPixel } from '../facebookPixel'
+import CTAButton from '../components/Shared/CTAButton'
 const Main = () => {
   const [siteData, setSiteData] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -27,6 +28,7 @@ const Main = () => {
       <div className='py-8 min-h-[calc(100vh-68px)] bg-bodycolor'>
         <Outlet />
       </div>
+       <CTAButton/>
       <Footer />
     </div>
   )
