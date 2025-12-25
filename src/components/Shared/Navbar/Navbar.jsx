@@ -4,6 +4,9 @@ import { FaPhone } from "react-icons/fa6";
 import { IoSearchSharp } from "react-icons/io5";
 import MobileMenu from './MobileMenu';
 import { LiaShoppingBagSolid } from "react-icons/lia";
+import UseInfo from '../../../hooks/UseInfo';
+import { useContext } from 'react';
+import SiteContext, { providerContext } from '../../../provider/SiteContext';
 
 const menuItems = [
   { label: 'Home', link: '/' },
@@ -11,8 +14,12 @@ const menuItems = [
   { label: 'Check Out', link: '/checkout' },
 ];
 
-const Navbar = ({siteData}) => {
+const Navbar = () => {
   const location = useLocation();
+  const {  siteData, loading } = UseInfo();
+  console.log(loading);
+  console.log(siteData.site_logo);
+
 
   return (
     <div className='w-full bg-white shadow-sm sticky top-0 z-20'>
