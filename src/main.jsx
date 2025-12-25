@@ -4,7 +4,6 @@ import { RouterProvider } from 'react-router-dom'
 import { router } from './routes/Routes'
 import { Bounce, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import SiteContext from './provider/SiteContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
@@ -23,8 +22,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       theme="light"
       transition={Bounce}
     />
-   <SiteContext>
      <RouterProvider router={router} />
-   </SiteContext>
   </>
 )

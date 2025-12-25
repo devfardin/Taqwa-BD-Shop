@@ -53,7 +53,7 @@ const Single = () => {
                     <div>
                         <div className="space-y-6 rounded-lg bg-white p-6">
                             {/* Product Title */}
-                            <h1 className="text-3xl font-bold text-gray-900">{product.name}</h1>
+                            <h1 className="text-2xl font-medium text-gray-900">{product.name}</h1>
 
                             {/* Short Description */}
                             {product.short_description && (
@@ -76,7 +76,7 @@ const Single = () => {
                                 <div className="flex flex-col gap-3">
                                     <SingleButton product={product} />
                                 </div>
-                                <button className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-md transition-colors">
+                                <button className="w-full bg-green-600 hover:bg-green-700 text-white text-lg font-semibold py-3 px-6 rounded transition-colors duration-300">
                                     অর্ডার করতে কল করুন
                                 </button>
                             </div>

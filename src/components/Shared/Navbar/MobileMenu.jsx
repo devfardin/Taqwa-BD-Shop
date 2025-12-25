@@ -5,6 +5,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import { TbMenu2 } from "react-icons/tb";
 import { RxCross1 } from "react-icons/rx";
 import { FaPhone } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 
 // Menu items for mobile
@@ -139,13 +140,28 @@ const MobileMenu = ({ siteData }) => {
                                     <FaPhone className="text-white text-sm" />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-gray-600">অর্ডার করতে কল করুন</p>
-                                    <a href="tel:+8801730638964" className="font-bold text-primary">
-                                        01730638964
+                                    <p className="text-lg text-gray-700">অর্ডার করতে কল করুন</p>
+                                    <a href={`tel:${siteData.shop_phone}`} className="font-bold text-primary">
+                                        {siteData.shop_phone}
                                     </a>
                                 </div>
                             </div>
                         </div>
+
+                        <div className="bg-gray-50 rounded-lg p-4 mb-4">
+                            <div className="flex items-center gap-3 mb-3">
+                                <div className="bg-green-500 p-2 rounded-full">
+                                    <FaWhatsapp className="text-white text-sm" />
+                                </div>
+                                <div>
+                                    <p className="text-lg text-gray-700">WhatsApp এ যোগাযোগ</p>
+                                    <a target="_blank" href={siteData.whatsapp_number} className="font-bold text-green-700">
+                                        {siteData.shop_phone}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
 
                         <Link
                             to="/checkout"
