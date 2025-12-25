@@ -18,11 +18,11 @@ const SiteContext = ({ children }) => {
 
     const sideInfo = { siteData, loading };
     return (
-        <providerContext.Provide value={sideInfo} >
+        <providerContext.Provider value={sideInfo}>
             {
                 children
             }
-        </providerContext.Provide>
+        </providerContext.Provider>
     )
 
 }
