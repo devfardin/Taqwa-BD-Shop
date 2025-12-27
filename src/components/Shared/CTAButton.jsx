@@ -1,18 +1,13 @@
 import { FaWhatsapp } from 'react-icons/fa'
 
 const CTAButton = ({siteData}) => {
-  console.log(siteData);
-  
-  const handleWhatsAppClick = () => {
-    window.open(siteData.whatsapp_number, '_blank')
-  }
 
   if(!siteData.length == 0) {
     return 
   }
 
   return (
-    <div className="fixed md:bottom-2 bottom-1 left-4 right-4 z-50 md:left-1/2 md:right-auto md:transform md:-translate-x-1/2">
+    <div className="fixed md:bottom-2 bottom-2left-4 right-4 z-50 md:left-1/2 md:right-auto md:transform md:-translate-x-1/2">
       <div className="bg-white shadow-xl rounded-lg p-4 flex items-center justify-between md:gap-5 gap-2 border  border-gray-200">
         {/* Left Side - Logo and Shop Info */}
         <div className="flex items-center space-x-3">

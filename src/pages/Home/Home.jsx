@@ -32,7 +32,7 @@ const Home = () => {
         <div className="mt-6 mb-3">
           <SectionTitle title='Feature' highlight='Products' lable='view all' to='/shop' />
         </div>
-        <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5">
+        <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-3 gap-2">
           {products?.map((product, index) => (
             <ProductCard product={product} key={index} />
           ))}

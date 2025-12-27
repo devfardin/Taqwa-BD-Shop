@@ -35,7 +35,7 @@ const Products = () => {
             <div className=" mb-3">
                 <SectionTitle title='All' highlight='Products' />
             </div>
-            <div className="grid 2xl:grid-cols-5  xl:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-5">
+            <div className="grid 2xl:grid-cols-5 xl:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-3 gap-2">
                 {products?.map((product, index) => (
                     <ProductCard product={product} key={index} />
                 ))}
